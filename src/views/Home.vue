@@ -10,11 +10,12 @@
 
       <div class="wording-container">
         <h1>Vue Cave</h1>
-        <p>It's a place to learn more complex concepts of Vue
+        <p>
+          This is a place to learn more complex concepts of Vue
           and to ultimately become a better front-end developer.
-          This site is aimed towards bringing to light the many complexities
-          of front-end development and all the little things that matter.
-          So, welcome to the Vue Cave and I hope you enjoy your stay :)</p>
+          This site is aimed towards bringing to light the many complexities of
+          Vue and all the little things that will make your life easier. :)
+        </p>
       </div>
     </div>
     <footer>
@@ -60,7 +61,7 @@ export default {
   }
 
   .link-divider {
-    border-right: 1px solid black;
+    border-right: 1px solid #42b983;
   }
 
   .intro-container {
