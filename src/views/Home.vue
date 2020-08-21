@@ -65,6 +65,11 @@ h1 {
   color: #fff;
 }
 
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
 .right-container {
   width: 400px;
   height: 300px;
@@ -75,7 +80,7 @@ h1 {
 }
 
 .inner-right-box {
-  padding: 10px;
+  width: 75%;
 }
 
 .buttons-container {
@@ -83,7 +88,7 @@ h1 {
 }
 
 .btn {
-  width: 55%;
+  width: 100%;
   padding: 10px;
   cursor: pointer;
   border: none;
@@ -103,6 +108,13 @@ h1 {
 }
 
 @media only screen and (max-width: 800px){
+  .home-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: -20%;
+  }
+
   .box {
     display: block;
   }
@@ -112,7 +124,7 @@ h1 {
   }
 
   .btn {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -134,6 +146,18 @@ h1 {
 
   .right-container {
     width: 300px;
+  }
+}
+
+@media only screen and (max-height: 667px){
+  .home-container {
+    margin-top: -10%;
+  }
+}
+
+@media only screen and (max-height: 568px){
+  .home-container {
+    margin-top: 0%;
   }
 }
 </style>
