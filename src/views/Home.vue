@@ -1,26 +1,30 @@
 <template>
-  <div class="home">
-    <div  class="links-wrapper">
-      <div id="nav-container" class="links">
-      <router-link v-bind:to="{name: 'projects'}" class="link-divider">Projects</router-link>
-      <router-link v-bind:to="{name: 'about'}">About</router-link>
-      </div>
-    </div>
-    <div class="intro-container">
-
-      <div class="wording-container">
+  <div class="home-container">
+    <div class="box">
+      <div class="left-container">
         <h1>Vue Cave</h1>
-        <p>
-          This is a place to learn more complex concepts of Vue
-          and to ultimately become a better front-end developer.
-          This site is aimed towards bringing to light the many complexities of
-          Vue and all the little things that will make your life easier. :)
-        </p>
+      </div>
+      <div class="right-container">
+        <div class="inner-right-box">
+          <p>
+          Vue is a brilliant framework.
+          The possibilities are endless and it makes front-end development enjoyable!
+          </p>
+        <div class="buttons-container">
+          <div>
+          <router-link class="btn" v-bind:to="{name: 'projects'}" tag="button">
+            Projects
+          </router-link>
+          </div>
+          <div>
+          <router-link class="btn bottom-btn" v-bind:to="{name: 'about'}" tag="button">
+            About
+          </router-link>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
-    <footer>
-      <p>create by Silas Huereca</p>
-    </footer>
   </div>
 </template>
 
@@ -32,89 +36,103 @@ export default {
 </script>
 
 <style scoped>
-  #home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+
+.home-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)
+}
+
+.left-container {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1dd1a1;
+}
+
+h1 {
+  color: #fff;
+}
+
+.right-container {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.inner-right-box {
+  padding: 10px;
+}
+
+.buttons-container {
+  padding-top: 20px;
+}
+
+.btn {
+  width: 55%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1dd1a1;
+  transition: all 0.1s ease-in-out;
+  color: white;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #10ac84;
+}
+
+.bottom-btn {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 800px){
+  .box {
+    display: block;
   }
 
-  .links-wrapper {
-    width: 100%;
-    text-align: center;
+  .left-container {
+    height: 225px;
   }
 
-  #nav-container {
-    padding-top: 30px;
+  .btn {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .left-container {
+    width: 350px;
   }
 
-  #nav-container a {
-    font-size: 25px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-style: none;
-    color: #fff;
-    text-decoration: none;
+  .right-container {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 370px){
+  .left-container {
+    width: 300px;
+    height: 200px;
   }
 
-  #nav-container a:hover {
-    color: #42b983;
+  .right-container {
+    width: 300px;
   }
-
-  .link-divider {
-    border-right: 1px solid #42b983;
-  }
-
-  .intro-container {
-    width: 100%;
-    margin-top: 10rem;
-    text-align: center;
-  }
-
-  .wording-container {
-    margin: auto;
-    width: 600px;
-  }
-
-  footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  }
-
-  footer p {
-    text-align: center;
-  }
-
-  h1 {
-    color: #42b983;
-  }
-
-  p {
-    color: #fff;
-    font-size: 18px;
-  }
-
-  @media only screen and (max-width: 850px){
-    .intro-container {
-      text-align: center;
-    }
-
-    .wording-container {
-      margin-left: 0;
-      width: 95%;
-      margin: auto;
-    }
-  }
-
-  @media only screen and (max-height: 670px){
-      .intro-container {
-      margin-top: 6rem;
-    }
-  }
-
-  @media only screen and (max-height: 600px){
-      .intro-container {
-      margin-top: 4rem;
-    }
-  }
+}
 </style>
