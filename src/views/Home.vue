@@ -7,8 +7,7 @@
       <div class="right-container">
         <div class="inner-right-box">
           <p>
-          Vue is a brilliant framework.
-          The possibilities are endless and it makes front-end development enjoyable!
+          Welcome to the vue cave.
           </p>
         <div class="buttons-container">
           <div>
