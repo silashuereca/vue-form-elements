@@ -2,12 +2,12 @@
   <div class="home-container">
     <div class="box">
       <div class="left-container">
-        <h1>Vue Cave</h1>
+        <h1>Vue Lab</h1>
       </div>
       <div class="right-container">
         <div class="inner-right-box">
           <p>
-          Welcome to the vue cave.
+            A test lab for complex Vue projects will complete documentaion. <br> Enjoy :)
           </p>
         <div class="buttons-container">
           <div>
@@ -48,7 +48,7 @@ export default {
 .box {
   display: flex;
   background-color: #fff;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6)
 }
 
 .left-container {
@@ -57,11 +57,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1dd1a1;
+  background-color: #55efc4;
 }
 
 h1 {
-  color: #fff;
+  color: #000;
 }
 
 p {
@@ -92,14 +92,15 @@ p {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #1dd1a1;
+  background-color: #55efc4;
   transition: all 0.1s ease-in-out;
-  color: white;
+  color: #000;
   font-size: 18px;
 }
 
 .btn:hover {
-  background-color: #10ac84;
+  background-color: #00b894;
+  color: #fff;
 }
 
 .bottom-btn {
