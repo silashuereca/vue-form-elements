@@ -7,7 +7,7 @@
       <div class="right-container">
         <div class="inner-right-box">
           <p>
-            A test lab for complex Vue projects will complete documentaion. <br> Enjoy :)
+            A test lab for Vue projects with complete documentaion. <br> Enjoy :)
           </p>
         <div class="buttons-container">
           <div>
