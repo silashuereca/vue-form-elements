@@ -2,8 +2,8 @@
 <div>
   <div class="banner">
     <div class="heading">
-      <h1>Clientside Projects</h1>
-      <p>A test lab for all clientside projects</p>
+      <h1>Front End Lab</h1>
+      <p>More than a todo app</p>
     </div>
   </div>
   <project v-bind:projects="projects"></project>
@@ -51,7 +51,7 @@ export default {
 
 h1 {
   font-size: 45px;
-  font-weight: 400;
+  font-weight: 800;
   color: var(--white)
 }
 
@@ -73,6 +73,7 @@ p {
     position: relative;
     bottom: 0;
     margin-left: 0;
+    width: 100%;
   }
 
   p {

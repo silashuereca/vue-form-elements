@@ -23,9 +23,6 @@ export default {
       default: (() => []),
     },
   },
-  created() {
-    console.log('component', this.projects);
-  },
 };
 </script>
 
@@ -34,8 +31,8 @@ export default {
 .project-container {
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 275px);
   justify-content: space-between;
 }
 
@@ -57,10 +54,14 @@ export default {
   height: 100px;
 }
 
+h2 {
+  font-weight: 500;
+}
+
 .description {
   width: 90%;
   margin: auto;
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: center;
 }
 
@@ -83,6 +84,14 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+}
+
+@media only screen and (max-width: 800px){
+  .project-container {
+    width: 100%;
+    grid-column-gap: 30px;
+    justify-content: center;
+  }
 }
 
 </style>
