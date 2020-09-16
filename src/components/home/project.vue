@@ -32,14 +32,14 @@ export default {
   width: 90%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 275px);
+  grid-template-columns: repeat(3, 350px);
   justify-content: space-between;
 }
 
 .project {
   position: relative;
-  width: 275px;
-  height: 300px;
+  width: 350px;
+  height: 400px;
   box-shadow: 0 25px 70px -12px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   overflow: hidden;
@@ -86,11 +86,17 @@ button {
   transition: all 0.1s ease-in-out;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1025px){
   .project-container {
     width: 100%;
+    grid-template-columns: repeat(auto-fill, 275px);
     grid-column-gap: 30px;
     justify-content: center;
+  }
+
+  .project {
+    width: 275px;
+    height: 300px;
   }
 }
 
