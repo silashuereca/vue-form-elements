@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <h1>About ME</h1>
+  <div class="project-container">
+    <h2>Forms</h2>
+    <div></div>
   </div>
 </template>
 
 <script>
 export default {
-	name: 'Bio',
+	name: 'Forms',
 };
 </script>
 

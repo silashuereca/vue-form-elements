@@ -1,14 +1,14 @@
 <template>
-<div>
-  <div class="banner">
-    <div class="heading">
-      <h1>Vue Cave</h1>
-      <p>more than a todo app</p>
+  <div>
+    <div class="banner">
+      <div class="heading">
+        <h1>Vue Cave</h1>
+        <p>more than a todo app</p>
+      </div>
+      <vanimation></vanimation>
     </div>
-    <vanimation></vanimation>
+    <project :projects="projects"></project>
   </div>
-  <project v-bind:projects="projects"></project>
-</div>
 </template>
 
 <script>
@@ -17,19 +17,19 @@ import project from '../components/home/project.vue';
 import vanimation from '../components/animations/v-animation.vue';
 
 export default {
-  name: 'home',
-  components: {
-    project,
-    vanimation,
-  },
-  data() {
-    return {
-      projects: [],
-    };
-  },
-  mounted() {
-    this.projects = projectRouts;
-  },
+	name: 'Home',
+	components: {
+		project,
+		vanimation,
+	},
+	data() {
+		return {
+			projects: [],
+		};
+	},
+	mounted() {
+		this.projects = projectRouts;
+	},
 };
 </script>
 

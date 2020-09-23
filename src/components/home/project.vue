@@ -1,28 +1,36 @@
 <template>
-<div class="project-container">
-  <div class="project" v-for="(item, index) in projects" v-bind:key="index">
-    <div class="project-banner">
-      <h2 v-text="item.heading"></h2>
-    </div>
-    <div class="description">
-      <p v-text="item.description"></p>
-    </div>
-    <div class="btn-container">
-    <router-link v-bind:to="{name: item.routeName}" v-text="item.button" tag="button"></router-link>
+  <div class="project-container">
+    <div
+      v-for="(item, index) in projects"
+      :key="index"
+      class="project"
+    >
+      <div class="project-banner">
+        <h2 v-text="item.heading"></h2>
+      </div>
+      <div class="description">
+        <p v-text="item.description"></p>
+      </div>
+      <div class="btn-container">
+        <router-link
+          :to="{name: item.routeName}"
+          tag="button"
+          v-text="item.button"
+        ></router-link>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
-  name: 'Project',
-  props: {
-    projects: {
-      type: Array,
-      default: (() => []),
-    },
-  },
+	name: 'Project',
+	props: {
+		projects: {
+			type: Array,
+			default: (() => []),
+		},
+	},
 };
 </script>
 
