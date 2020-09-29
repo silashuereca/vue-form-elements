@@ -5,22 +5,21 @@
         <h1>Vue Cave</h1>
         <p>more than a todo app</p>
       </div>
-      <vanimation></vanimation>
+      <!-- TODO: figure out how to add this later becuase it's too cool not to -->
+      <!-- <vanimation></vanimation> -->
     </div>
     <project :projects="projects"></project>
   </div>
 </template>
 
 <script>
-import { projectRouts } from '../js/project-links';
+import { projectRouts } from '../data/category-list';
 import project from '../components/home/project.vue';
-import vanimation from '../components/animations/v-animation.vue';
 
 export default {
 	name: 'Home',
 	components: {
 		project,
-		vanimation,
 	},
 	data() {
 		return {
@@ -64,7 +63,7 @@ h1 {
 p {
   font-size: 1.1rem;
   color: var(--white);
-  width: 400px;
+  width: 500px;
 }
 
 @media only screen and (max-width: 800px){

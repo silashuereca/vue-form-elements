@@ -1,16 +1,45 @@
 <template>
-  <div class="project-container">
-    <h2>Forms</h2>
-    <div></div>
+  <div class="projects">
+    <div class="banner">
+      <div class="heading">
+        <h1>Forms</h1>
+        <p>
+          Tooltips are text labels whose main purpose
+          is to help and/or educate the user on how to use a feature,
+          functionality or product element. In this system, tooltips are triggered by hover only.
+        </p>
+      </div>
+    </div>
+    <div class="sub-heading-container">
+      <h2>Projects</h2>
+    </div>
+    <div class="project-list-container">
+      <div
+        v-for="(item, index) in projects"
+        :key="index"
+        class="project-card"
+      >
+        <h2 v-text="item.name"></h2>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import {projectList} from '../../data/forms-projects.js';
 export default {
 	name: 'Forms',
+	data: function(){
+		return {
+			projects: []
+		}
+	},
+	mounted(){
+		this.projects = projectList;
+	}
 };
 </script>
 
-<style>
-
+<style scoped>
+@import '../../assets/css/project-list.css';
 </style>
