@@ -15,6 +15,7 @@
         <router-link
           :to="{name: item.routeName}"
           tag="button"
+          :disabled="item.disabled"
           v-text="item.button"
         ></router-link>
       </div>

@@ -5,21 +5,23 @@
         <h1>Vue Cave</h1>
         <p>more than a todo app</p>
       </div>
-      <!-- TODO: figure out how to add this later becuase it's too cool not to -->
-      <!-- <vanimation></vanimation> -->
+      <vanimation></vanimation>
     </div>
-    <project :projects="projects"></project>
+    <categories :projects="projects"></categories>
+    <div class="spacer-md"></div>
   </div>
 </template>
 
 <script>
 import { projectRouts } from '../data/category-list';
-import project from '../components/home/project.vue';
+import categories from '../components/home/categories.vue';
+import vanimation from '../components/animations/v-animation';
 
 export default {
 	name: 'Home',
 	components: {
-		project,
+		categories,
+		vanimation,
 	},
 	data() {
 		return {

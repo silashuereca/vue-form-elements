@@ -15,13 +15,18 @@
     </div>
     <div class="project-list-container">
       <div
-        v-for="(item, index) in projects"
+        v-for="(item, index) in projectList"
         :key="index"
         class="project-card"
       >
         <h2 v-text="item.name"></h2>
+        <img
+          :src="item.image"
+          alt="pic of silas"
+        >
       </div>
     </div>
+    <div class="spacer-md"></div>
   </div>
 </template>
 
@@ -31,12 +36,9 @@ export default {
 	name: 'Forms',
 	data: function(){
 		return {
-			projects: []
+			projectList
 		}
 	},
-	mounted(){
-		this.projects = projectList;
-	}
 };
 </script>
 
