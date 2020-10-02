@@ -10,20 +10,23 @@
         </p>
       </div>
     </div>
-    <div class="sub-heading-container">
-      <h2>Projects</h2>
-    </div>
+    <div class="spacer-md"></div>
     <div class="project-list-container">
       <div
         v-for="(item, index) in projectList"
         :key="index"
         class="project-card"
       >
-        <h2 v-text="item.name"></h2>
-        <img
-          :src="item.image"
-          alt="pic of silas"
-        >
+        <div class="user-container">
+          <img
+            :src="item.image"
+            alt="pic of silas"
+          >
+        </div>
+        <div class="user-content">
+          <h2 v-text="item.title"></h2>
+          <p v-text="item.description"></p>
+        </div>
       </div>
     </div>
     <div class="spacer-md"></div>

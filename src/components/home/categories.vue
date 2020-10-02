@@ -49,7 +49,7 @@ export default {
   position: relative;
   width: 350px;
   height: 400px;
-  box-shadow: 0 25px 70px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 70px -12px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
   overflow: hidden;
   margin-top: 100px;

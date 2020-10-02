@@ -1,21 +1,22 @@
 .projects {
 	width: 100%;
-	background-color: var(--primary);
 }
 
 .banner {
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+	background-color: var(--primary);
 }
 
 .heading {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	color: var(--white)
+	color: var(--white);
+	margin-bottom: 50px;
 }
 
 .heading p {
@@ -28,7 +29,7 @@
 	margin: auto;
 	color: var(--white);
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 }
 
 .project-list-container {
@@ -37,11 +38,37 @@
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
+	gap: 20px;
 }
 
 .project-card {
 	width: 100%;
-	height: 200px;
-	margin: 10px;
+	height: 125px;
+	padding: 10px;
 	background-color: var(--white);
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	box-shadow: 0 25px 70px -12px rgba(0, 0, 0, 0.35);
+}
+
+.project-card .user-container {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	width: 40%;
+	margin-right: 10px;
+}
+
+.project-card .user-content {
+	text-align: center;
+	width: 100%;
+	margin-left: 10px;
+}
+
+.project-card .user-container img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
 }
