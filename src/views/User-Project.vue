@@ -6,6 +6,7 @@
 
 <script>
 import showdown from 'showdown';
+import prettify from 'showdown-prettify';
 
 export default {
 	name: 'UserProject',
@@ -24,7 +25,9 @@ export default {
 				.then(response => response.json())
 				.then((results) => {
 					const markdown = atob(results.content);
-					const converter = new showdown.Converter()
+					const converter = new showdown.Converter({
+						extensions: [prettify]
+					});
 					const html = converter.makeHtml(markdown);
 					this.html = html;
 				}).catch((error) => {
