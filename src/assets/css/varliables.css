@@ -4,6 +4,10 @@
 	--white: #fff;
 	--btn-hover: #34495e;
 	--dark: #000;
+	--gray-1: #2d3436;
+	--gray-2: #57606f;
+	--green-primary: #10ac84;
+	--green-hover: #1abc9c;
 }
 
 h1, h2, h3, h4, h5, h6, p {

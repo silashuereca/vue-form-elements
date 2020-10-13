@@ -22,10 +22,22 @@
             :src="item.image"
             alt="pic of silas"
           >
+          <p
+            class="username"
+            v-text="item.username"
+          >
+          </p>
         </div>
         <div class="user-content">
           <h2 v-text="item.title"></h2>
-          <p v-text="item.description"></p>
+        </div>
+        <div class="projct-button-container">
+          <router-link
+            :to="{name: 'userProject', params: {repo: item.repo, username: item.username}}"
+            tag="button"
+          >
+            View
+          </router-link>
         </div>
       </div>
     </div>

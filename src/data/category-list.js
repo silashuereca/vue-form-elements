@@ -3,8 +3,8 @@ export const projectRouts = [
 		heading: 'Forms',
 		routeName: 'forms',
 		description: 'Forms and form validations are an important aspect of most websites. They are highly overlooked in developement.',
-		button: 'Coming soon...',
-		disabled: true
+		button: 'View',
+		disabled: false
 	},
 	{
 		heading: 'Games',

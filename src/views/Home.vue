@@ -3,9 +3,9 @@
     <div class="banner">
       <div class="heading">
         <h1>Vue Cave</h1>
-        <p>more than a todo app</p>
+        <p>A place for all things Vue</p>
       </div>
-      <vanimation></vanimation>
+      <!-- TODO: cool vue animation needs to go here -->
     </div>
     <categories :projects="projects"></categories>
     <div class="spacer-md"></div>
@@ -15,21 +15,16 @@
 <script>
 import { projectRouts } from '../data/category-list';
 import categories from '../components/home/categories.vue';
-import vanimation from '../components/animations/v-animation';
 
 export default {
 	name: 'Home',
 	components: {
-		categories,
-		vanimation,
+		categories
 	},
 	data() {
 		return {
-			projects: [],
+			projects: projectRouts
 		};
-	},
-	mounted() {
-		this.projects = projectRouts;
 	},
 };
 </script>
