@@ -21,18 +21,17 @@ export default {
 	methods: {
 		fetchData(){
 			//TODO there needs to be a loading indicator
+			console.log('Route', this.$route.params.username, 'repo', this.$route.params.repo);
 			return fetch(`https://api.github.com/repos/${this.$route.params.username}/${this.$route.params.repo}/readme`)
 				.then(response => response.json())
 				.then((results) => {
 					const markdown = atob(results.content);
-					const converter = new showdown.Converter({
-						extensions: [prettify]
-					});
+					const converter = new showdown.Converter();
 					const html = converter.makeHtml(markdown);
 					this.html = html;
 				}).catch((error) => {
 					//TODO: there needs to be an error shown to the user if it happens
-					console.log('Error', error);
+					console.error('Error', error);
 				})
 		}
 	}

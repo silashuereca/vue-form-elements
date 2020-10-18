@@ -87,12 +87,17 @@ button {
   padding-top: 11px;
   padding-bottom: 11px;
   border: none;
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--green-primary);
+  color: var(--dark);
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--green-hover);
+  color: var(--white);
 }
 
 @media only screen and (max-width: 1025px){
