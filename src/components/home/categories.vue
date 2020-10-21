@@ -1,10 +1,6 @@
 <template>
   <div class="project-container">
-    <div
-      v-for="(item, index) in projects"
-      :key="index"
-      class="project"
-    >
+    <div v-for="(item, index) in projects" v-bind:key="index" class="project">
       <div class="project-banner">
         <h2 v-text="item.heading"></h2>
       </div>
@@ -12,12 +8,7 @@
         <p v-text="item.description"></p>
       </div>
       <div class="btn-container">
-        <router-link
-          :to="{name: item.routeName}"
-          tag="button"
-          :disabled="item.disabled"
-          v-text="item.button"
-        ></router-link>
+        <router-link v-bind:to="{name: item.routeName}" tag="button" v-bind:disabled="item.disabled" v-text="item.button"></router-link>
       </div>
     </div>
   </div>

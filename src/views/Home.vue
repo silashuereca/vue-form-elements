@@ -7,7 +7,7 @@
       </div>
       <!-- TODO: cool vue animation needs to go here -->
     </div>
-    <categories :projects="projects"></categories>
+    <categories v-bind:projects="projects"></categories>
     <div class="spacer-md"></div>
   </div>
 </template>

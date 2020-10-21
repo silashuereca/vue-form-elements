@@ -12,30 +12,33 @@
     </div>
     <div class="spacer-md"></div>
     <div class="project-list-container">
-      <div
-        v-for="(item, index) in projectList"
-        :key="index"
-        class="project-card"
-      >
+      <div v-for="(item, index) in projectList" v-bind:key="index" class="project-card">
         <div class="user-container">
-          <img
-            :src="item.image"
-            alt="pic of silas"
-          >
-          <p
-            class="username"
-            v-text="item.username"
-          >
-          </p>
+          <div class="avatar-container">
+            <img v-bind:src="item.image" alt="pic of silas">
+          </div>
+          <div class="username-container">
+            <h3 class="username" v-text="item.name"></h3>
+            <p class="project-date">
+              <small v-text="item.date"></small>
+            </p>
+          </div>
         </div>
-        <div class="user-content">
-          <h2 v-text="item.title"></h2>
+        <div class="project-info">
+          <h4 v-text="limitString(item.title, 'heading')"></h4>
+          <small class="content-description" v-text="limitString(item.description, 'description')"></small>
         </div>
-        <div class="projct-button-container">
-          <router-link
-            :to="{name: 'userProject', params: {repo: item.repo, username: item.username}}"
-            tag="button"
-          >
+        
+        <div class="project-buttons-container">
+          <div class="social">
+            <a v-bind:href="item.social.github_url" target="_blank">
+              <img src="../../assets/github.png" alt="Github icon">
+            </a>
+            <a class="social-left" v-bind:href="item.social.linkedin_url" target="_blank">
+              <img src="../../assets/linkedin.png" alt="LinkedIn icon">
+            </a>
+          </div>
+          <router-link v-bind:to="{name: 'userProject', params: {repo: item.repo_name, username: item.username}}" tag="button">
             View
           </router-link>
         </div>
@@ -46,12 +49,15 @@
 </template>
 
 <script>
+import {limitString} from '../../helpers.js';
 import {projectList} from '../../data/forms-projects.js';
 export default {
 	name: 'Forms',
 	data: function(){
 		return {
-			projectList
+			projectList,
+			//filter
+			limitString
 		}
 	},
 };

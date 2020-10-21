@@ -1,5 +1,6 @@
 <template>
   <div class="markdown-body">
+    <!-- eslint-disable-next-line -->
     <div v-html="html"></div>
   </div>
 </template>

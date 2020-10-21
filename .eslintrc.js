@@ -16,6 +16,14 @@ module.exports = {
 				"component": "never"
 			}
 		}],
+		"vue/max-attributes-per-line": ["error", {
+			"singleline": 5,
+			"multiline": {
+				"max": 1,
+				"allowFirstLine": false
+			}
+		}],
+		"vue/v-bind-style": ["error", "longform"],
 		indent: ["error", "tab"],
 		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
