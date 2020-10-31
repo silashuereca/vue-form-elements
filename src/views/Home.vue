@@ -19,7 +19,7 @@ import categories from '../components/home/categories.vue';
 export default {
 	name: 'Home',
 	components: {
-		categories
+		categories,
 	},
 	data() {
 		return {

@@ -9,8 +9,9 @@ Vue.use(VueRouter);
 const routes = [
 	{ path: '/', name: 'home', component: Home },
 	{ path: '/forms', name: 'forms', component: Forms },
-	{ path: '/forms/:repo/:username', name: 'userProject', component: UserProject },
-	{ path: '/user-search'}
+	{ path: '/:category/:repo/:username', name: 'userProject', component: UserProject },
+	{ path: '/user-search' },
+	{ path: '/*', redirect: '/'}
 ];
 
 const router = new VueRouter({

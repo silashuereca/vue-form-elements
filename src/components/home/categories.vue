@@ -8,7 +8,8 @@
         <p v-text="item.description"></p>
       </div>
       <div class="btn-container">
-        <router-link v-bind:to="{name: item.routeName}" tag="button" v-bind:disabled="item.disabled" v-text="item.button"></router-link>
+        <router-link v-show="!item.disabled" v-bind:to="{name: item.routeName}" tag="button" v-text="item.button"></router-link>
+        <h3 v-show="item.disabled" v-text="item.button"></h3>
       </div>
     </div>
   </div>
@@ -80,6 +81,7 @@ button {
   border: none;
   background-color: var(--green-primary);
   color: var(--dark);
+  opacity: 0.8;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
@@ -87,8 +89,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--green-hover);
-  color: var(--white);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1025px){

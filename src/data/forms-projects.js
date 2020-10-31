@@ -9,7 +9,9 @@ export const projectList = [
 			linkedin_url: 'https://www.linkedin.com/in/silas-huereca-135b9b163/',
 			github_url: 'https://github.com/silashuereca'
 		},
+		module: 'forms',
 		repo_name: 'front-end-cave',
+		//TODO: this needs to be a proper date string
 		date: '08/26/2020',
 		github_id: '12345',
 	},

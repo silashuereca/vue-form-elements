@@ -38,7 +38,7 @@
               <img src="../../assets/linkedin.png" alt="LinkedIn icon">
             </a>
           </div>
-          <router-link v-bind:to="{name: 'userProject', params: {repo: item.repo_name, username: item.username}}" tag="button">
+          <router-link v-bind:to="{name: 'userProject', params: {category: 'forms', repo: item.repo_name, username: item.username}}" tag="button">
             View
           </router-link>
         </div>
