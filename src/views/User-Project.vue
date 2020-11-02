@@ -13,7 +13,7 @@
 import {mainData} from '../data/all-data.js';
 import showdown from 'showdown';
 import prettify from 'showdown-prettify';
-import loader from '../components/animations/v-animation.vue';
+import loader from '../components/animations/loader.vue';
 
 export default {
 	name: 'UserProject',

@@ -9,7 +9,7 @@
       </div>
       <div class="btn-container">
         <router-link v-show="!item.disabled" v-bind:to="{name: item.routeName}" tag="button" v-text="item.button"></router-link>
-        <h3 v-show="item.disabled" v-text="item.button"></h3>
+        <p v-show="item.disabled" v-text="item.button"></p>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@ button:hover {
 
   .project {
     width: 275px;
-    height: 300px;
+    height: 325px;
   }
 }
 

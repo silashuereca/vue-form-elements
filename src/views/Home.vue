@@ -3,9 +3,9 @@
     <div class="banner">
       <div class="heading">
         <h1>Vue Cave</h1>
-        <p>A place for all things Vue</p>
+        <p>Welcome to Vue Cave, an open source platform aiming to host documented projects that are primarily built with Vue or just vanilla JavaScript.</p>
       </div>
-      <!-- TODO: cool vue animation needs to go here -->
+      <!-- TODO: cool vue animation needs to go here -- probably in the second phase -->
     </div>
     <categories v-bind:projects="projects"></categories>
     <div class="spacer-md"></div>

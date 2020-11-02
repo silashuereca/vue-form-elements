@@ -45,7 +45,7 @@
   border-radius: 5px;
   filter: drop-shadow(0 15px 10px #2ECC71);
   animation: tail ease-in-out;
-  animation: 2s infinite;
+  animation: 1s infinite;
 }
 
 .star1 {

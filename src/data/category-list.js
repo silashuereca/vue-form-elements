@@ -2,28 +2,28 @@ export const projectRouts = [
 	{
 		heading: 'Forms',
 		routeName: 'forms',
-		description: 'Forms and form validations are an important aspect of most websites. They are highly overlooked in developement.',
+		description: 'Forms in development are overlooked and are arguably one of the most important aspects of a website. Knowing how to build them properly is essential.',
 		button: 'View',
 		disabled: false
 	},
 	{
 		heading: 'Games',
 		routeName: 'games',
-		description: 'Building games is not easy and there are a lot of detail that goes into building one. So, why not build games to sharpen my Javascript skills?',
+		description: '"I thought I could make my own games. I wanted to see how games work. That\'s what led me to learn how to program computers." - Elon Musk',
 		button: 'Coming soon...',
 		disabled: true
 	},
 	{
 		heading: 'Animations',
 		routeName: 'animation',
-		description: 'Animations can be really awesome to experience and help the pull the user in. However, you can over do it.',
+		description: 'Adding animations to your site is a great way to bring certain sections to life. It\'s a nice skill to have when engineering UIs. However, overdoing it can harm your site.',
 		button: 'Coming soon...',
 		disabled: true
 	},
 	{
 		heading: 'UI/UX',
 		routeName: 'ui-ux',
-		description: 'Concepts of design and usability should always be pared to help a flawless user experience.',
+		description: 'Having a well thought out UI/UX application can help users stay engaged with your platform. The end goal is to delight our users :)',
 		button: 'Coming soon...',
 		disabled: true
 	},
@@ -37,7 +37,7 @@ export const projectRouts = [
 	{
 		heading: 'Performance',
 		routeName: 'games',
-		description: 'It is quite simple really, the faster your website is, the more customers stay engaged.',
+		description: 'It is quite simple, the faster your website is, the more users stay engaged. However, achieving that edge and maintaining it as your application grows is the hard part.',
 		button: 'Coming soon...',
 		disabled: true
 	},

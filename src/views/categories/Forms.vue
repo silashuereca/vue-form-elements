@@ -4,13 +4,12 @@
       <div class="heading">
         <h1>Forms</h1>
         <p>
-          Tooltips are text labels whose main purpose
-          is to help and/or educate the user on how to use a feature,
-          functionality or product element. In this system, tooltips are triggered by hover only.
+          Whether it's validation, readability, or re-usability, forms can provide a fantastic user experience if done right. With proper engineering, forms can also be well maintained and reusable on the development side if built correctly.
         </p>
       </div>
     </div>
     <div class="spacer-md"></div>
+    <!-- TODO: this needs to be a component -->
     <div class="project-list-container">
       <div v-for="(item, index) in projectList" v-bind:key="index" class="project-card">
         <div class="user-container">
