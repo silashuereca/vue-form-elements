@@ -26,7 +26,6 @@
   right: 0;
   bottom: 0;
   z-index: 100;
-  background-color: var(--primary);
 }
 
 .v-container {

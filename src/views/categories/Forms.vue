@@ -4,7 +4,7 @@
       <div class="heading">
         <h1>Forms</h1>
         <p>
-          Whether it's validation, readability, or re-usability, forms can provide a fantastic user experience if done right. With proper engineering, forms can also be well maintained and reusable on the development side if built correctly.
+          Whether it's validation, readability, or re-usability, forms can provide a fantastic user experience if done right. With proper engineering, forms can also be well maintained and reusable on the development side.
         </p>
       </div>
     </div>

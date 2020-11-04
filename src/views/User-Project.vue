@@ -32,7 +32,6 @@ export default {
 			next();
 			this.fetchData();
 		}
-		next(false);
 	},
 	mounted(){
 		const valid = this.validateProject(this.$route.params);
@@ -40,7 +39,6 @@ export default {
 			this.fetchData();
 			return;
 		}
-
 	},
 	methods: {
 		delayResponse(time){
