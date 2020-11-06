@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">
+    <div v-show="!$route.query.categories" class="banner">
       <div class="heading">
         <h1>Vue Cave</h1>
         <p>Welcome to an open source platform aiming to host documented projects that are primarily built with Vue!</p>

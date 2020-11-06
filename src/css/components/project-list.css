@@ -124,11 +124,11 @@
 @media only screen and (max-width: 400px){
 
 	.project-list-container {
-		grid-template-columns: repeat(1, 99%);
+		grid-template-columns: repeat(1, 100%);
 		grid-column-gap: 0px;
 	}
 
 	.project-card {
-		width: 99%;
+		width: 100%;
 	}
 }
