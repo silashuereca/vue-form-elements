@@ -33,9 +33,10 @@
             <a v-bind:href="item.social.github_url" target="_blank">
               <img src="../../assets/github.png" alt="Github icon">
             </a>
-            <a class="social-left" v-bind:href="item.social.linkedin_url" target="_blank">
+            <!-- TODO: will need to figure out where to put this -->
+            <!-- <a class="social-left" v-bind:href="item.social.linkedin_url" target="_blank">
               <img src="../../assets/linkedin.png" alt="LinkedIn icon">
-            </a>
+            </a> -->
           </div>
           <router-link v-bind:to="{name: 'userProject', params: {category: 'forms', repo: item.repo_name, username: item.username}}" tag="button">
             View
