@@ -2,7 +2,7 @@ export const projectRouts = [
 	{
 		heading: 'Forms',
 		routeName: 'forms',
-		description: 'Forms in development are overlooked and are arguably one of the most important aspects of a website. Knowing how to build them properly is essential.',
+		description: 'Forms in development are overlooked and are arguably one of the more important aspects of a website. Knowing how to build them properly is essential.',
 		button: 'View',
 		disabled: false
 	},

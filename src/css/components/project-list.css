@@ -120,3 +120,15 @@
 	}
 
 }
+
+@media only screen and (max-width: 400px){
+
+	.project-list-container {
+		grid-template-columns: repeat(1, 99%);
+		grid-column-gap: 0px;
+	}
+
+	.project-card {
+		width: 99%;
+	}
+}

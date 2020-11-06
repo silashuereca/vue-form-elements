@@ -1,9 +1,11 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router.js';
-import './assets/css/main.css';
+import loader from './libs/auto-load/Loader.vue';
+import './css/main.css';
 
-Vue.config.productionTip = false;
+//global components
+Vue.component('loader', loader);
 
 new Vue({
 	router,

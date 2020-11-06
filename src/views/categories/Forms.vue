@@ -4,7 +4,7 @@
       <div class="heading">
         <h1>Forms</h1>
         <p>
-          Whether it's validation, readability, or re-usability, forms can provide a fantastic user experience if done right. With proper engineering, forms can also be well maintained and reusable on the development side.
+          Whether it's validation, readability, or re-usability, forms can provide a fantastic user experience if built right. With proper engineering, forms can also be well maintained and reusable for the development side.
         </p>
       </div>
     </div>
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import {limitString} from '../../helpers.js';
+import {limitString} from '../../libs/helpers.js';
 import {projectList} from '../../data/forms-projects.js';
 export default {
 	name: 'Forms',
@@ -63,5 +63,5 @@ export default {
 </script>
 
 <style scoped>
-@import '../../assets/css/project-list.css';
+@import '../../css/components/project-list.css';
 </style>

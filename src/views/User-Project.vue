@@ -13,13 +13,9 @@
 import {mainData} from '../data/all-data.js';
 import showdown from 'showdown';
 import prettify from 'showdown-prettify';
-import loader from '../components/animations/loader.vue';
 
 export default {
 	name: 'UserProject',
-	components: {
-		loader
-	},
 	data: function(){
 		return {
 			status: 'idle',
@@ -81,7 +77,7 @@ export default {
 </script>
 
 <style scoped>
-@import '../assets/css/markdown.css';
+@import '../css/components/markdown.css';
 
 .markdown-body {
 	width: 70%;

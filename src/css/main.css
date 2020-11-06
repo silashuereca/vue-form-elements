@@ -1,5 +1,5 @@
-@import './varliables.css';
-@import './banner.css';
+@import './variables.css';
+@import './components/banner.css';
 
 body {
   padding: 0;
