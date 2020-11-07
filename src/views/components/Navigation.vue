@@ -28,6 +28,11 @@
         <router-link v-for="(value, name) in routerLinks" v-bind:key="name" v-bind:to="{name: `${name}`}" @click.native="toggleMenu(true)" v-text="capFirstLetter(name)"></router-link>
       </div>
     </div>
+    <div v-show="back" class="fixed-back-container">
+      <div class="back-btn-container">
+        <a href="javascript:history.go(-1)">Back</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,8 +46,24 @@ export default {
 		return {
 			menu: false,
 			routerLinks: allData,
+			back: false,
 			//filter
 			capFirstLetter
+		}
+	},
+	watch: {
+		$route(to){
+			if(to.path !== '/'){
+				this.back = true
+				return;
+			}
+      
+			this.back = false;
+		}
+	},
+	mounted(){
+		if(this.$route.path !== '/'){
+			this.back = true;
 		}
 	},
 	methods: {
