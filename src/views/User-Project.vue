@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {mainData} from '../data/all-data.js';
+import {allData} from '../data/all-data.js';
 import showdown from 'showdown';
 import prettify from 'showdown-prettify';
 
@@ -59,7 +59,7 @@ export default {
 		},
 		validateProject(route){
 			// check if any of these projects have been contributed to this site if not they are not valid
-			const category = mainData[route.category];
+			const category = allData[route.category];
 			if(!category){
 				return false;
 			}

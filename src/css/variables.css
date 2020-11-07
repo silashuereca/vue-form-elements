@@ -1,5 +1,6 @@
 :root {
 	--primary: #192a56;
+	--overlay-menu: rgba(25, 42, 86, 0.98);
 	--info: #48dbfb;
 	--white: #fff;
 	--btn-hover: #34495e;

@@ -1,28 +1,64 @@
 <template>
-  <nav>
-    <div class="nav-container">
-      <div class="logo-container">
-        <div class="logo">
-          <router-link to="/">
-            VC
-          </router-link>
+  <div>
+    <nav>
+      <div class="menu-container">
+        <div class="logo-container">
+          <div class="logo">
+            <router-link to="/">
+              VC
+            </router-link>
+          </div>
+        </div>
+        <div>
+          <button type="button" @click="toggleMenu()">
+            Menu
+          </button>
         </div>
       </div>
-      <div class="nav-bts-container">
-        <router-link class="home link" to="/">
+    </nav>
+    <div ref="overlay" class="overlay-menu">
+      <button type="button" @click="toggleMenu()">
+        X
+      </button>
+      <div class="overlay-content">
+        <router-link to="/" @click.native="toggleMenu(true)">
           Home
         </router-link>
-        <router-link class="home link" v-bind:to="{name: 'home', query: {categories: 'true'}}">
-          Categories
-        </router-link>
-        <a ref="noopener" class="link" href="https://github.com/silashuereca/vue-cave" target="_blank">Contribute</a>
+        <a ref="noopener" href="https://github.com/silashuereca/vue-cave" target="_blank">Contribute</a>
+        <router-link v-for="(value, name) in routerLinks" v-bind:key="name" v-bind:to="{name: `${name}`}" @click.native="toggleMenu(true)" v-text="capFirstLetter(name)"></router-link>
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
+import {allData} from '../../data/all-data.js';
+import {capFirstLetter} from '../../libs/helpers.js';
+
 export default {
-	name: 'Naviation'
+	name: 'Naviation',
+	data: function(){
+		return {
+			menu: false,
+			routerLinks: allData,
+			//filter
+			capFirstLetter
+		}
+	},
+	methods: {
+		toggleMenu(close){
+			this.menu = !this.menu;
+      
+			if(this.menu){
+				this.$refs.overlay.style.width = '100%';
+			}
+
+			if(!this.menu || close){
+				this.$refs.overlay.style.width = '0%';
+			}
+      
+			
+		}
+	}
 }
 </script>

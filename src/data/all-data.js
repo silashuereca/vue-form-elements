@@ -1,9 +1,9 @@
 import { projectList as formList } from './forms-projects';
 
-const mainData = {
+const allData = {
 	forms: formList
 }
 
 export {
-	mainData
+	allData
 }
