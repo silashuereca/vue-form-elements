@@ -72,10 +72,15 @@ export default {
       
 			if(this.menu){
 				this.$refs.overlay.style.width = '100%';
+				this.back = false;
 			}
 
 			if(!this.menu || close){
 				this.$refs.overlay.style.width = '0%';
+				
+				if(this.$route.path !== '/'){
+					this.back = true;
+				}
 			}
       
 			

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router.js';
-import loader from './libs/auto-load/Loader.vue';
+import loader from './libs/global-components/Loader.vue';
 
 import './css/components/navigation.css';
 import './css/main.css';

@@ -7,7 +7,7 @@
       </div>
       <!-- TODO: cool vue animation needs to go here -- probably in the second phase -->
     </div>
-    <categories v-bind:projects="projects"></categories>
+    <categories v-bind:categories="categories"></categories>
     <div class="spacer-md"></div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
 	},
 	data() {
 		return {
-			projects: projectRouts
+			categories: projectRouts
 		};
 	},
 };

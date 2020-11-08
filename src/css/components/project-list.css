@@ -23,7 +23,7 @@
 .project-card {
 	position: relative;
 	width: 350px;
-	height: 325px;
+	height: 375px;
 	background-color: var(--white);
 	border-radius: 10px;
 	box-shadow: 0 25px 70px -12px rgba(0, 0, 0, 0.35);
@@ -64,44 +64,39 @@
 
 .project-buttons-container {
 	position: absolute;
+	display: table;
 	left: 0;
+	right: 0;
 	bottom: 10px;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.link-wrapper {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 }
 
-.social {
-	margin: auto;
-	padding-bottom: 10px;
-	width: 90%;
-	text-align: left;
-}
-
-.social img{
-	width: 25px;
-	object-fit: cover;
-}
-
-.social-left {
-	margin-left: 10px;
-}
-
-.project-card button {
-	width: 90%;
+.project-card a {
+	width: 100%;
   padding-top: 11px;
   padding-bottom: 11px;
   border: none;
   background-color: var(--green-primary);
   color: var(--dark);
-  font-size: 18px;
+	font-size: 18px;
+	text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+	margin: 0px 0px 6px 0px;
 }
 
-.project-card button:hover {
+.project-card a:hover {
 	background-color: var(--green-hover);
-	color: var(--white);
 }
 
 @media only screen and (max-width: 800px){

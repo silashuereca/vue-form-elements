@@ -1,6 +1,6 @@
 <template>
   <div class="project-container">
-    <div v-for="(item, index) in projects" v-bind:key="index" class="project">
+    <div v-for="(item, index) in categories" v-bind:key="index" class="project">
       <div class="project-banner">
         <h2 v-text="item.heading"></h2>
       </div>
@@ -19,7 +19,7 @@
 export default {
 	name: 'Project',
 	props: {
-		projects: {
+		categories: {
 			type: Array,
 			default: (() => []),
 		},

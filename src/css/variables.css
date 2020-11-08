@@ -9,7 +9,7 @@
 	--gray-2: #57606f;
 	--green-primary: #55efc4;
 	--green-button: #00b894;
-	--green-hover: #1abc9c;
+	--green-hover: rgb(85, 239, 196, 0.8);
 }
 
 h1, h2, h3, h4, h5, h6, p {
