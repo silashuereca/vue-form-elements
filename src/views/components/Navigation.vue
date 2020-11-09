@@ -11,7 +11,9 @@
         </div>
         <div>
           <button type="button" @click="toggleMenu()">
-            Menu
+            <div class="menu-bar top"></div>
+            <div class="menu-bar middle"></div>
+            <div class="menu-bar bottom"></div>
           </button>
         </div>
       </div>
