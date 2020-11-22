@@ -1,5 +1,5 @@
-export const projectList = []
+export const performance = []
 
 export default {
-	projectList
+	performance
 }

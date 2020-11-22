@@ -9,8 +9,8 @@
             </router-link>
           </div>
         </div>
-        <div>
-          <button type="button" @click="toggleMenu()">
+        <div v-show="!menu">
+          <button type="button" @click="toggleMenu($event)">
             <div class="menu-bar top"></div>
             <div class="menu-bar middle"></div>
             <div class="menu-bar bottom"></div>
@@ -18,16 +18,28 @@
         </div>
       </div>
     </nav>
-    <div ref="overlay" class="overlay-menu">
-      <button type="button" @click="toggleMenu()">
+    <div v-show="menu" ref="overlay" class="overlay-menu">
+      <button type="button" @click="toggleMenu($event, false)">
         X
       </button>
-      <div class="overlay-content">
-        <router-link to="/" @click.native="toggleMenu(true)">
-          Home
-        </router-link>
-        <a ref="noopener" href="https://github.com/silashuereca/vue-cave" target="_blank">Contribute</a>
-        <router-link v-for="(value, name) in routerLinks" v-bind:key="name" v-bind:to="{name: `${name}`}" @click.native="toggleMenu(true)" v-text="capFirstLetter(name)"></router-link>
+      <div class="overlay-content-container">
+        <div class="overlay-content">
+          <router-link to="/" @click.native="toggleMenu($event, true)">
+            Home
+          </router-link>
+          <router-link class="contribute" v-bind:to="{name: 'contribute'}" @click.native="toggleMenu($event, true)">
+            Contribute
+          </router-link>
+          <router-link
+            v-for="(value, name) in routerLinks"
+            v-bind:key="name"
+            v-bind:to="{name: `${name}`}"
+            v-bind:class="{'disable-link': !value.length}"
+            @click.native="toggleMenu($event, true)"
+          >
+            <p v-text="capFirstLetter(name)"></p>
+          </router-link>
+        </div>
       </div>
     </div>
     <div v-show="back" class="fixed-back-container">
@@ -47,8 +59,9 @@ export default {
 	data: function(){
 		return {
 			menu: false,
-			routerLinks: allData,
 			back: false,
+			routerLinks: allData,
+
 			//filter
 			capFirstLetter
 		}
@@ -67,25 +80,38 @@ export default {
 		if(this.$route.path !== '/'){
 			this.back = true;
 		}
+		this.clickAway()
 	},
 	methods: {
-		toggleMenu(close){
+		// Toggle the menu and back button
+		toggleMenu(event, close){
+			event.stopPropagation();
 			this.menu = !this.menu;
       
 			if(this.menu){
-				this.$refs.overlay.style.width = '100%';
 				this.back = false;
 			}
 
 			if(!this.menu || close){
-				this.$refs.overlay.style.width = '0%';
-				
-				if(this.$route.path !== '/'){
-					this.back = true;
-				}
+				this.setBackButton();
 			}
       
-			
+		},
+		clickAway(){
+			const overlay = this.$refs.overlay;
+			document.addEventListener('click', (event) => {
+				const isClickInside = overlay.contains(event.target);
+
+				if(!isClickInside && this.menu){
+					this.setBackButton();
+					this.menu = false;
+				}
+			})
+		},
+		setBackButton(){
+			if(this.$route.path !== '/'){
+				this.back = true;
+			}
 		}
 	}
 }

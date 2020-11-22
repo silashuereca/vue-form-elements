@@ -1,5 +1,5 @@
-export const projectList = []
+export const animations = []
 
 export default {
-	projectList
+	animations
 }

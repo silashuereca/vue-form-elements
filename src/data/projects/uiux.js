@@ -1,5 +1,5 @@
-export const projectList = []
+export const uiux = []
 
 export default {
-	projectList
+	uiux
 }

@@ -1,7 +1,8 @@
-export const projectList = [
+export const forms = [
 	{
 		name: 'Silas Huereca',
 		username: 'silashuereca',
+		//TODO: this should be named avatar
 		image: "https://avatars2.githubusercontent.com/u/43799078?v=4",
 		title: 'Using v-model with custom component',
 		description: 'Using two way binding with a custom component is great for re-usability and scalability',
@@ -14,5 +15,5 @@ export const projectList = [
 ]
 
 export default {
-	projectList
+	forms
 }

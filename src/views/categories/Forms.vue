@@ -8,13 +8,13 @@
         </p>
       </div>
     </div>
-    <project-list v-bind:projects="projectList"></project-list>
+    <project-list v-bind:projects="forms"></project-list>
     <div class="spacer-md"></div>
   </div>
 </template>
 
 <script>
-import {projectList} from '../../data/projects/forms.js';
+import {forms} from '../../data/projects/forms.js';
 import ProjectList from '../components/ProjectList.vue';
 
 export default {
@@ -24,7 +24,7 @@ export default {
 	},
 	data: function(){
 		return {
-			projectList,
+			forms,
 		}
 	},
 };

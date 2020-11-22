@@ -1,5 +1,5 @@
-export const projectList = []
+export const games = []
 
 export default {
-	projectList
+	games
 }

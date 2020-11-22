@@ -1,5 +1,5 @@
-export const projectList = []
+export const a11y = []
 
 export default {
-	projectList
+	a11y
 }

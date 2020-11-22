@@ -43,7 +43,7 @@ nav {
 }
 
 .overlay-menu {
-  width: 0;
+  width: 40%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -66,6 +66,7 @@ nav {
 	border: none;
 	cursor: pointer;
 	transition: all 0.1s ease-in-out;
+	z-index: 100;
 }
 
 .overlay-menu button:hover{
@@ -76,18 +77,42 @@ nav {
 .overlay-menu a {
 	padding: 8px;
   text-decoration: none;
-  font-size: 36px;
-  color: var(--green-primary);
-  display: block;
+  font-size: 30px;
+	color: var(--green-primary);
+	display: block;
   transition: 0.3s;
+}
+
+.overlay-menu a small {
+	font-size: 10px;
+}
+
+.overlay-menu a:hover {
+	color: var(--green-hover);
+}
+
+.overlay-content-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height: 100%;
 }
 
 .overlay-content {
 	position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+	width: 100%;
+	padding: 50px;
+	text-align: left;
+}
+
+.disable-link {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: default;
+}
+
+.contribute {
+	margin-bottom: 50px;
 }
 
 .fixed-back-container {
@@ -125,5 +150,9 @@ nav {
 @media only screen and (max-width: 800px){
 	.menu-container {
 		width: 90%;
+	}
+
+	.overlay-menu {
+		width: 70%;
 	}
 }
