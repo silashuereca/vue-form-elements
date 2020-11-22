@@ -153,6 +153,12 @@ nav {
 	}
 
 	.overlay-menu {
-		width: 70%;
+		width: 55%;
+	}
+}
+
+@media only screen and (max-width: 750px){
+	.overlay-menu {
+		width: 85%;
 	}
 }
