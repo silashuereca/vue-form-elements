@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import {projectList} from '../../data/forms-projects.js';
+import {projectList} from '../../data/projects/forms.js';
 import ProjectList from '../components/ProjectList.vue';
 
 export default {
