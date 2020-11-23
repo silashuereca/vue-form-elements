@@ -12,6 +12,7 @@ nav {
 .menu-container {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 	align-items: center;
 	width: 90%;
 }
