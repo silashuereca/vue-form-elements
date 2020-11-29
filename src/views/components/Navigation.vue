@@ -27,7 +27,7 @@
           <router-link to="/" @click.native="toggleMenu($event, true)">
             Home
           </router-link>
-          <router-link class="contribute" v-bind:to="{name: 'contribute'}" @click.native="toggleMenu($event, true)">
+          <router-link class="contribute" v-bind:to="{name: 'addProject'}" @click.native="toggleMenu($event, true)">
             Contribute
           </router-link>
           <router-link

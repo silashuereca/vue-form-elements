@@ -4,7 +4,12 @@ import VueRouter from 'vue-router';
 //route components
 import Home from './views/Home.vue';
 import UserProject from './views/User-Project.vue';
+
+//Contribute
 import Contribute from './views/Contribute.vue';
+import AddProject from './views/contribute/Add-Project.vue';
+import BugFix from './views/contribute/Bug-Fix.vue';
+import NewFeature from './views/contribute/New-Feature.vue';
 
 //category components
 import Forms from './views/categories/Forms.vue';
@@ -17,8 +22,19 @@ import Performance from './views/categories/Performance.vue';
 Vue.use(VueRouter);
 
 const routes = [
+	//Home
 	{ path: '/', name: 'home', component: Home },
-	{ path: '/contribute', name: 'contribute', component: Contribute},
+	
+	//Contribute
+	{
+		path: '/contribute', name: 'contribute', component: Contribute, children: [
+			{path: 'add-project', name: 'addProject', component: AddProject},
+			{path: 'bug-fix', name: 'bugFix', component: BugFix},
+			{ path: 'new-feature', name: 'newFeature', component: NewFeature },
+			{ path: '*', redirect: 'add-project'}
+		]
+	},
+	
 	{ path: '/:category/:repo/:username', name: 'userProject', component: UserProject },
 
 	//categories
@@ -36,6 +52,7 @@ const router = new VueRouter({
 	mode: 'hash',
 	base: process.env.BASE_URL,
 	routes,
+	linkActiveClass: 'active-link',
 	scrollBehavior () {
 		return { x: 0, y: 0 }
 	}
