@@ -24,8 +24,15 @@ h1, h2, h3, h4, h5, h6, p {
 	padding: 0;
 }
 
+pre {
+  padding: 1rem;
+  background-color: var(--primary);
+  color: var(--green-primary);
+}
+
 button {
   outline: none;
+  border: none;
 }
 
 .spacer-sm {
@@ -36,4 +43,16 @@ button {
 .spacer-md {
   width: 100%;
   height: 100px;
+}
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.col-gap-1 {
+  column-gap: 1rem;
 }

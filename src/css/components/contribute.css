@@ -4,6 +4,10 @@
 	margin: auto;
 }
 
+.project-form {
+	height: 300px;
+}
+
 .tabs-container {
 	width: 100%;
 	display: flex;
@@ -68,4 +72,18 @@
 
 .step-actions p {
 	padding-top: 0.5rem;
+}
+
+/* TODO: buttons need to be more bootstrapped for better scalability */
+.contribute-btn {
+	margin-top: 3rem;
+	float: right;
+	padding: 0.5rem 1rem;
+	background-color: var(--primary);
+	color: var(--green-primary);
+	cursor: pointer;
+}
+
+.contribute-btn:hover {
+	color: var(--green-hover);
 }

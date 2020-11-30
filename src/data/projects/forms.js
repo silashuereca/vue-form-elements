@@ -10,7 +10,6 @@ export const forms = [
 		repo_name: 'front-end-cave',
 		//TODO: this needs to be a proper date string
 		date: '08/26/2020',
-		github_id: '12345',
 	},
 ]
 

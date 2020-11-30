@@ -23,4 +23,5 @@ export default {
 
 <style scoped>
 @import '../css/components/contribute.css';
+@import '../css/form.css';
 </style>
