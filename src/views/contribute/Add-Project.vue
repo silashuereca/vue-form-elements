@@ -32,44 +32,62 @@
         </p>
       </div>
     </section>
-    <section class="step-container project-form">
+    <section class="step-container">
       <div class="step-box">
         <h2>3</h2>
       </div>
       <div class="step-actions">
         <h2>Project Information</h2>
-        <form v-show="content === 'no-content'" class="contribute-form" @submit.prevent="setContent()">
-          <div class="flex between col-gap-1">
-            <div class="form-group">
-              <label for="username">Username:</label>
-              <input id="username" v-model="form.username" placeholder="Github username...">
+        <form @submit.prevent="setContent()">
+          <div v-show="content === 'no-content'">
+            <div class="flex between col-gap-1">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input id="username" v-model="$v.form.username.$model" v-bind:class="{error: $v.form.username.$error}" placeholder="Github username...">
+                <p v-show="$v.form.username.$error" class="error-message">
+                  username is required
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" v-model="$v.form.category.$model" v-bind:class="{error: $v.form.category.$error}">
+                  <option value="" disabled>
+                    Select a category...
+                  </option>
+                  <option>Forms</option>
+                </select>
+                <p v-show="$v.form.category.$error" class="error-message">
+                  category is required
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="repo_name">Repository</label>
+                <input id="repo_name" v-model="$v.form.repo_name.$model" v-bind:class="{error: $v.form.repo_name.$error}" placeholder="Your project's repository name...">
+                <p v-show="$v.form.repo_name.$error" class="error-message">
+                  This field is required
+                </p>
+              </div>
             </div>
             <div class="form-group">
-              <label for="category">Category</label>
-              <select id="category" v-model="form.category">
-                <option value="" disabled>
-                  Select a category
-                </option>
-                <option>Forms</option>
-              </select>
+              <label for="title">Title</label>
+              <input id="title" v-model="$v.form.title.$model" v-bind:class="{error: $v.form.title.$error}" placeholder="Title of your project...">
+              <p v-show="$v.form.title.$error" class="error-message">
+                title is required
+              </p>
             </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input id="description" v-model="$v.form.description.$model" v-bind:class="{error: $v.form.description.$error}" placeholder="Overview of your project...">
+              <p v-show="$v.form.description.$error" class="error-message">
+                description is required
+              </p>
+            </div>
+            <button type="submit" class="contribute-btn">
+              Set Content
+            </button>
           </div>
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input id="title" v-model="form.title" placeholder="Title of your project...">
-          </div>
-          <div class="form-group">
-            <label for="description">Description</label>
-            <input id="description" v-model="form.description" placeholder="Overview of your project...">
-          </div>
-          <button type="submit" class="contribute-btn">
-            Set Content
-          </button>
         </form>
         <pre v-show="content === 'content-set'" v-text="form"></pre>
-        <button v-show="content === 'content-set'" type="button" class="contribute-btn">
-          Copy
-        </button>
       </div>
     </section>
     <section class="step-container">
@@ -92,6 +110,8 @@
 </template>
 
 <script>
+import {required} from 'vuelidate/lib/validators';
+
 export default {
 	name: 'AddProject',
 	data: function(){
@@ -109,19 +129,42 @@ export default {
 			content: 'no-content'
 		}
 	},
+	validations: {
+		form: {
+			username: {required},
+			category: {required},
+			title: {required},
+			repo_name: {required},
+			description: {required}
+		}
+	},
 	methods: {
 		setContent(event){
+			this.$v.$touch();
+			if(this.$v.$invalid){return};
+      
 			this.content = 'content-loading';
 			fetch('https://api.github.com/users/' + this.form.username)
 				.then(response => response.json())
 				.then((results) => {
+					const date = new Date();
+					const dateStamp = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`
 					this.form.name = results.name;
 					this.form.avatar_url = results.avatar_url;
+					this.form.date = this.setDate();
 					this.content = 'content-set';
 				}).catch((error) => {
 					this.content = 'content-error';
 					console.error('Error', error);
 				})
+		},
+		setDate(){
+			let today = new Date();
+			const dd = String(today.getDate()).padStart(2, '0');
+			const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+			const yyyy = today.getFullYear();
+
+			return today = mm + '/' + dd + '/' + yyyy;
 		}
 	}
 }
