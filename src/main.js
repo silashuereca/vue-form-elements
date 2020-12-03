@@ -3,6 +3,8 @@ import App from './App.vue';
 import router from './router.js';
 import loader from './libs/global-components/Loader.vue';
 import Vuelidate from 'vuelidate';
+
+//css
 import './css/components/navigation.css';
 import './css/main.css';
 

@@ -88,6 +88,14 @@
           </div>
         </form>
         <pre v-show="content === 'content-set'" v-text="form"></pre>
+        <button
+          v-show="content === 'content-set'"
+          type="button"
+          class="contribute-btn"
+          @click="copyContent()"
+        >
+          Copy Content
+        </button>
       </div>
     </section>
     <section class="step-container">
@@ -111,7 +119,7 @@
 
 <script>
 import {required} from 'vuelidate/lib/validators';
-
+import users from '../../data/new.json';
 export default {
 	name: 'AddProject',
 	data: function(){
@@ -154,6 +162,7 @@ export default {
 					this.form.date = this.setDate();
 					this.content = 'content-set';
 				}).catch((error) => {
+					//TODO: add error message to show to the user if this request fails
 					this.content = 'content-error';
 					console.error('Error', error);
 				})
@@ -165,6 +174,9 @@ export default {
 			const yyyy = today.getFullYear();
 
 			return today = mm + '/' + dd + '/' + yyyy;
+		},
+		copyContent(){
+			console.log('Form', this.form);
 		}
 	}
 }
