@@ -185,7 +185,7 @@ export default {
 				description: ''
 			},
 			content: 'no-content',
-			filePath: 'src > data > '
+			filePath: 'src > data > projects > '
 		}
 	},
 	validations: {
