@@ -1,9 +1,9 @@
-import { forms } from './projects/forms.js';
-import { games } from './projects/games.js';
-import { animations } from './projects/animations.js';
-import { uiux } from './projects/uiux.js';
-import { a11y } from './projects/a11y.js';
-import { performance } from './projects/performance.js';
+const forms = require('./projects/forms.json');
+const games = require('./projects/games.json');
+const animations = require('./projects/animations.json');
+const uiux = require('./projects/uiux.json');
+const a11y = require('./projects/a11y.json');
+const performance = require('./projects/performance.json');
 
 const allData = {
 	forms,

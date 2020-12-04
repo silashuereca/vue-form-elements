@@ -4,8 +4,12 @@
 	margin: auto;
 }
 
-.project-form {
-	height: 300px;
+.supported {
+	display: none;
+}
+
+.keep-height {
+	height: 400px;
 }
 
 .tabs-container {
@@ -36,6 +40,7 @@
 	margin: auto;
 	display: flex;
 	padding-top: 75px;
+	overflow: hidden;
 }
 
 .step-box {
@@ -51,6 +56,10 @@
 
 .step-actions {
 	width: 100%;
+}
+
+.step-content {
+	padding-left: 0.75rem;
 }
 
 .example {
@@ -86,4 +95,14 @@
 
 .contribute-btn:hover {
 	color: var(--green-hover);
+}
+
+@media only screen and (max-width: 900px){
+	.contribute-tabs-container{
+		display: none
+	}
+
+	.supported {
+		display: block;
+	}
 }

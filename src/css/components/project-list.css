@@ -22,8 +22,8 @@
 
 .project-card {
 	position: relative;
-	width: 350px;
-	height: 375px;
+	width: 325px;
+	height: 350px;
 	background-color: var(--white);
 	border-radius: 10px;
 	box-shadow: 0 25px 70px -12px rgba(0, 0, 0, 0.35);

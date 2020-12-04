@@ -28,6 +28,8 @@ pre {
   padding: 1rem;
   background-color: var(--primary);
   color: var(--green-primary);
+  white-space: pre-wrap; 
+	word-break: break-word;
 }
 
 button {
@@ -55,4 +57,11 @@ button {
 
 .col-gap-1 {
   column-gap: 1rem;
+}
+
+.text-highlight {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: var(--primary);
+  color: var(--green-primary);
 }
