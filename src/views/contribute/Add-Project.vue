@@ -237,7 +237,7 @@ export default {
 			form.repo_name = '';
 			form.date = '';
 			form.description = '';
-			this.filePath = '';
+			this.filePath = 'src > data > projects > ';
       
 			this.$v.$reset();
 			this.content = 'no-content';
