@@ -1,0 +1,108 @@
+.contribute-container {
+	padding-top: 150px;
+	width: 60%;
+	margin: auto;
+}
+
+.supported {
+	display: none;
+}
+
+.keep-height {
+	height: 400px;
+}
+
+.tabs-container {
+	width: 100%;
+	display: flex;
+}
+
+.tab {
+	width: 100%;
+	height: 50px;
+	border: 1px solid white;
+	background-color: var(--green-primary);
+	color: var(--dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+}
+
+.tab:hover {
+	background-color: var(--primary);
+	color: var(--green-primary);
+}
+
+.step-container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	padding-top: 75px;
+	overflow: hidden;
+}
+
+.step-box {
+	width: 60px;
+	height: 60px;
+	background-color: var(--primary);
+	color: var(--green-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2rem;
+}
+
+.step-actions {
+	width: 100%;
+}
+
+.step-content {
+	padding-left: 0.75rem;
+}
+
+.example {
+	background-color: var(--primary);
+	color: var(--green-primary);
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-top: 1rem;
+}
+
+.step-actions h2 {
+ margin-top: -6px;
+ padding-bottom: 1rem;
+}
+
+.step-actions h3 {
+	padding-top: 1rem;
+}
+
+.step-actions p {
+	padding-top: 0.5rem;
+}
+
+/* TODO: buttons need to be more bootstrapped for better scalability */
+.contribute-btn {
+	margin-top: 3rem;
+	float: right;
+	padding: 0.5rem 1rem;
+	background-color: var(--primary);
+	color: var(--green-primary);
+	cursor: pointer;
+}
+
+.contribute-btn:hover {
+	color: var(--green-hover);
+}
+
+@media only screen and (max-width: 900px){
+	.contribute-tabs-container{
+		display: none
+	}
+
+	.supported {
+		display: block;
+	}
+}

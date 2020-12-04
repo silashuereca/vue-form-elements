@@ -10,9 +10,5 @@
 	--green-primary: #55efc4;
 	--green-button: #00b894;
 	--green-hover: rgb(85, 239, 196, 0.8);
-}
-
-h1, h2, h3, h4, h5, h6, p {
-	margin: 0;
-	padding: 0;
+	--form-error: #e74c3c;
 }

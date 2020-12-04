@@ -28,6 +28,7 @@
     "showdown": "^1.9.1",
     "showdown-prettify": "^1.3.0",
     "vue-eslint-parser": "^7.1.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuelidate": "^0.7.6"
   }
 }

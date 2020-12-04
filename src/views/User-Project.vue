@@ -82,7 +82,7 @@ export default {
 .markdown-body {
 	width: 70%;
 	margin: auto;
-	padding-top: 100px;
+	padding-top: 150px;
 }
 
 @media only screen and (max-width: 800px){

@@ -3,7 +3,7 @@
     <div v-for="(item, index) in projects" v-bind:key="index" class="project-card">
       <div class="user-container">
         <div class="avatar-container">
-          <img v-bind:src="item.image" alt="pic of silas">
+          <img v-bind:src="item.avatar_url" alt="User image">
         </div>
         <div class="username-container">
           <h3 class="username" v-text="item.name"></h3>
@@ -19,7 +19,6 @@
         
       <div class="project-buttons-container">
         <div class="link-wrapper">
-          <a v-bind:href="item.site" clas="site-link" rel="noopener" target="_blank">Demo</a>
           <router-link v-bind:to="{name: 'userProject', params: {category: 'forms', repo: item.repo_name, username: item.username}}">
             Documentation
           </router-link>
