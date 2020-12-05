@@ -11,6 +11,9 @@
         <router-link v-bind:to="{name: 'newFeature'}" class="tab" v-bind:class="{active: $route.fullPath === '/contribute/new-feature'}" tag="button">
           <h2>New Feature</h2>
         </router-link>
+        <router-link v-bind:to="{name: 'community'}" class="tab" v-bind:class="{active: $route.fullPath === '/contribute/community'}" tag="button">
+          <h2>Community</h2>
+        </router-link>
       </div>
       <router-view v-bind:key="$route.fullPath"></router-view>
     </div>

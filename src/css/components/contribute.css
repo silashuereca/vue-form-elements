@@ -83,6 +83,20 @@
 	padding-top: 0.5rem;
 }
 
+.join-link-wrapper {
+	text-decoration: none;
+}
+
+.join-link {
+	border-radius: 5px;
+}
+
+
+
+.join-link:hover {
+	color: var(--green-hover);
+}
+
 /* TODO: buttons need to be more bootstrapped for better scalability */
 .contribute-btn {
 	margin-top: 3rem;

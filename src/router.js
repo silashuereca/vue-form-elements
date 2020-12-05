@@ -5,11 +5,15 @@ import VueRouter from 'vue-router';
 import Home from './views/Home.vue';
 import UserProject from './views/User-Project.vue';
 
+//Community
+
+
 //Contribute
 import Contribute from './views/Contribute.vue';
 import AddProject from './views/contribute/Add-Project.vue';
 import BugFix from './views/contribute/Bug-Fix.vue';
 import NewFeature from './views/contribute/New-Feature.vue';
+import Community from './views/contribute/Community.vue';
 
 //category components
 import Forms from './views/categories/Forms.vue';
@@ -24,13 +28,14 @@ Vue.use(VueRouter);
 const routes = [
 	//Home
 	{ path: '/', name: 'home', component: Home },
-	
+
 	//Contribute
 	{
 		path: '/contribute', name: 'contribute', component: Contribute, children: [
-			{path: 'add-project', name: 'addProject', component: AddProject},
-			{path: 'bug-fix', name: 'bugFix', component: BugFix},
+			{ path: 'add-project', name: 'addProject', component: AddProject},
+			{ path: 'bug-fix', name: 'bugFix', component: BugFix},
 			{ path: 'new-feature', name: 'newFeature', component: NewFeature },
+			{ path: 'community', name: 'community', component: Community},
 			{ path: '*', redirect: 'add-project'}
 		]
 	},
