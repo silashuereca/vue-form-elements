@@ -6,7 +6,7 @@
         <p>
           <a class="join-link-wrapper" href="https://join.slack.com/t/vuecave/shared_invite/zt-k464oiow-coxLBBanq~y3sQq95RNDZw" target="_blank" rel="noopner"><span class="join-link text-highlight">Join Vue Cave!</span></a>
         </p>
-      </div>a;slkj><
+      </div>
     </section>
   </div>
 </template>
