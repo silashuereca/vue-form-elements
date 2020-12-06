@@ -4,4 +4,5 @@ This open-source project aims to provide documentation for anything primarily bu
 [Get Started](https://www.vuecave.com/#/contribute/add-project)
 
 Join Vue Cave's Community!
+
 [Join](https://join.slack.com/t/vuecave/shared_invite/zt-k464oiow-coxLBBanq~y3sQq95RNDZw)
