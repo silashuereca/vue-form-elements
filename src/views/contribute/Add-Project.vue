@@ -36,6 +36,12 @@
           <h3>Create Branch</h3>
           <p>Create a branch using this naming guidline to help pull request’s stay more specific:</p>
           <pre>project/GITHUB-USERNAME/PROJECT-NAME-HERE</pre>
+          <h3>Having Trouble?</h3>
+          <p>
+            Join our <router-link v-bind:to="{name: 'community'}">
+              community!
+            </router-link>
+          </p>
         </div>
       </div>
     </section>
@@ -90,7 +96,7 @@
               </div>
               <div class="form-group">
                 <label for="repo_name">Repository</label>
-                <input id="repo_name" v-model="$v.form.repo_name.$model" v-bind:class="{error: $v.form.repo_name.$error}" placeholder="Your project's repository name...">
+                <input id="repo_name" v-model="$v.form.repo_name.$model" v-bind:class="{error: $v.form.repo_name.$error}" placeholder="Example: vue-cave">
                 <p v-show="$v.form.repo_name.$error" class="error-message">
                   This field is required
                 </p>
@@ -170,7 +176,7 @@ export default {
 	data: function(){
 		return {
 			setup: {
-				install: 'npm install or npm i',
+				install: 'npm ci',
 				vue: 'npm install vue',
 				start: 'npm run serve'
 			},
@@ -225,7 +231,7 @@ export default {
 			const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 			const yyyy = today.getFullYear();
 
-			return today = mm + '/' + dd + '/' + yyyy;
+			return today = yyyy + '-' + dd + '-' + mm;
 		},
 		reset(){
 			const form = this.form;
