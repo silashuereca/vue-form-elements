@@ -24,6 +24,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-vue": "^6.2.2",
     "husky": ">=4",
     "lint-staged": ">=10",
@@ -39,6 +40,8 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js": "eslint --cache --fix",
+    "*.vue": "vue-cli-service lint --fix",
+    "*.json": "eslint --cache --fix"
   }
 }

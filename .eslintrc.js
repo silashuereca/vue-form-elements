@@ -5,6 +5,7 @@ module.exports = {
 	},
 	extends: [
 		'plugin:vue/recommended',
+		"plugin:json/recommended"
 	],
 	parserOptions: {
 		parser: 'babel-eslint',
